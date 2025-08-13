@@ -10,7 +10,7 @@ load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize the model
-model = ChatGroq(model="Gemma2-9B-It", groq_api_key=groq_api_key)
+model = ChatGroq(model="llama-3.1-8b-instant", groq_api_key=groq_api_key)
 
 # Set up prompt and parser
 system_template = "translate the following into {language} :"
@@ -39,3 +39,4 @@ if st.button("Translate"):
                 st.write(result)
             except Exception as e:
                 st.error(f"Error: {e}")
+
